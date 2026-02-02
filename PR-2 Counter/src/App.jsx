@@ -1,12 +1,11 @@
-import './App.css'
-import Countercomp from './assets/components/counter'
+import "./App.css";
+import Countercomp from "./components/counter";
 function App() {
-
   return (
     <>
-      <Countercomp/>
+      <Countercomp />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

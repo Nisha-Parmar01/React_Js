@@ -1,6 +1,6 @@
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import './App.css'
-import Footer from './components/fotter';
+import Footer from './components/Fotter/fotter';
 import Faq from './pages/FAQ';
 
 

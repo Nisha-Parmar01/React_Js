@@ -1,6 +1,6 @@
 import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { useState } from "react";
-import logo from "../assets/image/logo.png";
+import logo from "../../assets/image/logo.png";
 import {
   FaSearch,
   FaUser,
@@ -8,7 +8,7 @@ import {
   FaShoppingCart,
   FaAngleDown,
 } from "react-icons/fa";
-import "./Header.css";
+import "./header.css";
 function Header() {
   const [active, setActive] = useState(null);
   return (

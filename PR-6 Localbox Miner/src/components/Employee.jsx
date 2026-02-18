@@ -8,6 +8,7 @@ import {
   Card,
   Badge,
 } from "react-bootstrap";
+import generateUniqueId from "generate-unique-id";
 import "./Employee.css";
 
 const EmployeeLS = () => {
@@ -39,10 +40,6 @@ const EmployeeLS = () => {
   useEffect(() => {
     sessionStorage.setItem("employees", JSON.stringify(employees));
   }, [employees]);
-
-  const generateID = () => {
-    return "EMP" + Date.now();
-  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -118,14 +115,22 @@ const EmployeeLS = () => {
     if (Object.keys(validationErrors).length === 0) {
       if (editIndex !== null) {
         const updated = [...employees];
-        updated[editIndex] = formdata;
+        updated[editIndex] = {
+          ...formdata,
+          id: employees[editIndex].id,
+        };
         setEmployees(updated);
         setEditIndex(null);
       } else {
         const newEmployee = {
           ...formdata,
-          id: generateID(),
+          id: generateUniqueId({
+            length: 6,
+            useLetters: false,
+            useNumbers: true,
+          }),
         };
+
         setEmployees([...employees, newEmployee]);
       }
       setFormdata(initialState);
@@ -367,6 +372,10 @@ const EmployeeLS = () => {
                     {emp.status}
                   </Badge>
                 </div>
+                <p className="mb-1 text-muted small">
+                  <strong>Employee ID:</strong> {emp.id}
+                </p>
+
                 <p className="text-muted small mb-2">{emp.email}</p>
                 <Badge bg="primary" className="mb-3">
                   {emp.department}

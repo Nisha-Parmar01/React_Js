@@ -1,0 +1,40 @@
+{
+  "name": "react-bootstrap",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "",
+  "private": true,
+  "packageManager": "pnpm@10.18.3+sha512.bbd16e6d7286fd7e01f6b3c0b3c932cda2965c06a908328f74663f10a9aea51f1129eea615134bf992831b009eabe167ecb7008b597f40ff9bc75946aadfb08d",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint-staged": "lint-staged",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "pnpm run prepare:gitHooks && pnpm run prepare:deps",
+    "prepare:deps": "pnpm --filter './internals/*' run build",
+    "prepare:gitHooks": "husky",
+    "test": "pnpm run test:spelling && pnpm run test:lint && pnpm run test:type && pnpm run test:unit",
+    "test:coverage": "pnpm run --recursive test:coverage",
+    "test:lint": "eslint --max-warnings 0 . && pnpm run --recursive test:lint",
+    "test:spelling": "cspell lint '**'",
+    "test:type": "tsc --noEmit && pnpm run --recursive test:type",
+    "test:unit": "pnpm run --recursive test:unit"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
+    "@internals/eslint-config": "workspace:*",
+    "@internals/lint-staged-config": "workspace:*",
+    "@internals/prettier-config": "workspace:*",
+    "@internals/tsconfig": "workspace:*",
+    "cspell": "^9.4.0",
+    "eslint": "^9.39.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.7.4",
+    "prettier-plugin-jsdoc": "^1.8.0",
+    "prettier-plugin-pkg": "^0.21.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.49.0"
+  }
+}

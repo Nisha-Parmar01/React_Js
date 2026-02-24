@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": [
+    "./src/base.json",
+    "./src/compiler.none.json",
+    "./src/platform.server.json",
+    "./src/purpose.library.json"
+  ],
+  "compilerOptions": {
+    "noEmit": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*.json"]
+}

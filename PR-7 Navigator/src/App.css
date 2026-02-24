@@ -1,0 +1,40 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.product-card {
+  border-radius: 14px;
+  transition: 0.3s ease;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+.product-card .card-body {
+  padding: 15px;
+}
+
+.product-title {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.product-card .card-text {
+  color: #6c757d;
+}
+
+.product-card strong {
+  color: #495057;
+  font-weight: 500;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.rating {
+  color: #f4b400;
+  font-weight: 500;
+}

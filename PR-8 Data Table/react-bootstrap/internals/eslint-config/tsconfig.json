@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": [
+    "@internals/tsconfig/base.json",
+    "@internals/tsconfig/compiler.native.json",
+    "@internals/tsconfig/platform.server.json"
+  ],
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src"
+  },
+  "include": ["src"]
+}

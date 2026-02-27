@@ -1,0 +1,82 @@
+#root {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f8f9fa;   
+}
+
+.product-card {
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  background-color: #fff;
+  border: none;
+}
+
+.product-card .card-body {
+  padding: 18px;
+}
+
+.product-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #212529;
+  margin-bottom: 6px;
+}
+
+.product-card .card-text {
+  color: #6c757d;
+  margin-bottom: 6px;
+}
+
+.product-card strong {
+  color: #343a40;
+  font-weight: 600;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+.product-card img {
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ⭐ Rating */
+.rating {
+  color: #f4b400;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+.btn-danger {
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #bb2d3b;
+}
+
+
+.form-control {
+  border-radius: 8px;
+}
+
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
